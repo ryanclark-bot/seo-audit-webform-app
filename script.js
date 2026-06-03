@@ -2,7 +2,7 @@ const form = document.getElementById('auditForm');
 const statusDiv = document.getElementById('status');
 
 // Replace later with your production webhook URL
-const WEBHOOK_URL = 'https://YOUR-N8N-URL/webhook/seo-audit';
+const WEBHOOK_URL = 'https://scorpionoperations.app.n8n.cloud/webhook-test/seo-audit';
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
