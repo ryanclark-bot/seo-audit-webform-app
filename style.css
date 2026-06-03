@@ -118,3 +118,39 @@ button:hover {
     grid-template-columns: 1fr;
   }
 }
+.status-card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: #111827;
+  color: #cbd5e1;
+}
+
+.status-card strong {
+  color: #f8fafc;
+}
+
+.status-card.success {
+  border-color: rgba(34, 197, 94, 0.45);
+  background: rgba(22, 101, 52, 0.18);
+}
+
+.status-card.error {
+  border-color: rgba(248, 113, 113, 0.45);
+  background: rgba(127, 29, 29, 0.18);
+}
+
+.status-card a {
+  display: inline-block;
+  margin: 8px 12px 8px 0;
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+#copyAuditLink {
+  display: inline-block;
+  width: auto;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+}
