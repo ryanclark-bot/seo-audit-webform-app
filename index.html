@@ -10,21 +10,67 @@
 
   <div class="container">
     <h1>Generate Your SEO Visibility Audit</h1>
+
     <p class="subtitle">
       Enter your business information below to generate a custom SEO audit.
     </p>
 
     <form id="auditForm">
-      <input type="text" name="companyName" placeholder="Company Name" required />
-      <input type="text" name="website" placeholder="Website URL" required />
-      <input type="text" name="industry" placeholder="Industry" />
-      <input type="text" name="businessType" placeholder="Business Type" />
-      <input type="text" name="city" placeholder="City" />
-      <input type="text" name="state" placeholder="State" />
-      <input type="text" name="contactName" placeholder="Contact Name" />
-      <input type="email" name="contactEmail" placeholder="Email Address" required />
 
-      <button type="submit">Generate Audit</button>
+      <input
+        type="text"
+        name="companyName"
+        placeholder="Company Name"
+        required
+      />
+
+      <input
+        type="text"
+        name="website"
+        placeholder="Website URL"
+        required
+      />
+
+      <input
+        type="text"
+        name="industry"
+        placeholder="Industry"
+      />
+
+      <input
+        type="text"
+        name="businessType"
+        placeholder="Business Type"
+      />
+
+      <input
+        type="text"
+        name="city"
+        placeholder="City"
+      />
+
+      <input
+        type="text"
+        name="state"
+        placeholder="State"
+      />
+
+      <input
+        type="email"
+        name="contactEmail"
+        placeholder="Send Audit URL To"
+        required
+      />
+
+      <textarea
+        name="notes"
+        placeholder="Notes: competitors, market context, discovery notes, or special instructions"
+      ></textarea>
+
+      <button type="submit">
+        Generate Audit
+      </button>
+
     </form>
 
     <div id="status"></div>
