@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEO Audit Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Generate Your SEO Visibility Audit</h1>
+    <p class="subtitle">
+      Enter your business information below to generate a custom SEO audit.
+    </p>
+
+    <form id="auditForm">
+      <input type="text" name="companyName" placeholder="Company Name" required />
+      <input type="text" name="website" placeholder="Website URL" required />
+      <input type="text" name="industry" placeholder="Industry" />
+      <input type="text" name="businessType" placeholder="Business Type" />
+      <input type="text" name="city" placeholder="City" />
+      <input type="text" name="state" placeholder="State" />
+      <input type="text" name="contactName" placeholder="Contact Name" />
+      <input type="email" name="contactEmail" placeholder="Email Address" required />
+
+      <button type="submit">Generate Audit</button>
+    </form>
+
+    <div id="status"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
