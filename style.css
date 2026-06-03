@@ -1,53 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 32%),
+    #0b1220;
+  color: #f8fafc;
   margin: 0;
-  padding: 0;
+  padding: 32px 18px;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 40px;
-  background: #111827;
-  border-radius: 12px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
 
 h1 {
-  margin-top: 0;
-  font-size: 52px;
-  line-height: 1.1;
+  margin: 0 0 10px;
+  font-size: 38px;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
 }
 
 .subtitle {
   color: #cbd5e1;
-  margin-bottom: 30px;
-  font-size: 18px;
+  margin: 0 0 24px;
+  font-size: 16px;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
 }
 
 input,
 textarea {
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #334155;
-  background: #1e293b;
-  color: white;
-  font-size: 20px;
   width: 100%;
-  box-sizing: border-box;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1px solid #475569;
+  background: #111827;
+  color: #f8fafc;
+  font-size: 15px;
+  outline: none;
 }
 
-textarea {
-  min-height: 140px;
-  resize: vertical;
-  font-family: Arial, sans-serif;
+input:focus,
+textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.16);
 }
 
 input::placeholder,
@@ -55,17 +65,56 @@ textarea::placeholder {
   color: #94a3b8;
 }
 
+input[name="companyName"],
+input[name="website"],
+input[name="contactEmail"],
+textarea,
 button {
-  padding: 22px;
+  grid-column: 1 / -1;
+}
+
+textarea {
+  min-height: 96px;
+  resize: vertical;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  margin-top: 4px;
+  padding: 14px;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: 700;
+  color: #06111f;
+  background: #f8fafc;
+}
+
+button:hover {
+  background: #e2e8f0;
 }
 
 #status {
-  margin-top: 24px;
+  margin-top: 18px;
   color: #cbd5e1;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 18px 12px;
+  }
+
+  .container {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
 }
