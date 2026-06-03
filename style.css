@@ -43,7 +43,8 @@ form {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   padding: 13px 14px;
   border-radius: 10px;
@@ -55,7 +56,8 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   border-color: #38bdf8;
   box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.16);
 }
@@ -65,9 +67,16 @@ textarea::placeholder {
   color: #94a3b8;
 }
 
+select {
+  appearance: none;
+  cursor: pointer;
+  color: #f8fafc;
+}
+
 input[name="companyName"],
 input[name="website"],
 input[name="contactEmail"],
+select[name="sellerName"],
 textarea,
 button {
   grid-column: 1 / -1;
@@ -95,29 +104,17 @@ button:hover {
   background: #e2e8f0;
 }
 
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 #status {
   margin-top: 18px;
   color: #cbd5e1;
   font-size: 15px;
 }
 
-@media (max-width: 720px) {
-  body {
-    padding: 18px 12px;
-  }
-
-  .container {
-    padding: 22px;
-  }
-
-  h1 {
-    font-size: 32px;
-  }
-
-  form {
-    grid-template-columns: 1fr;
-  }
-}
 .status-card {
   padding: 16px;
   border-radius: 12px;
@@ -153,4 +150,22 @@ button:hover {
   padding: 8px 14px;
   font-size: 14px;
   border-radius: 8px;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 18px 12px;
+  }
+
+  .container {
+    padding: 22px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
 }
